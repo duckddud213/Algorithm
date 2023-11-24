@@ -1,0 +1,294 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "boj1065",
+            "request": "launch",
+            "mainClass": "boj1065",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj10828",
+            "request": "launch",
+            "mainClass": "boj10828",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj10828Scanner",
+            "request": "launch",
+            "mainClass": "boj10828Scanner",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj10866",
+            "request": "launch",
+            "mainClass": "boj10866",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj1193",
+            "request": "launch",
+            "mainClass": "boj1193",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj12100",
+            "request": "launch",
+            "mainClass": "boj12100",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj1260",
+            "request": "launch",
+            "mainClass": "boj1260",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj1316",
+            "request": "launch",
+            "mainClass": "boj1316",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj13460",
+            "request": "launch",
+            "mainClass": "boj13460",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj13460Original",
+            "request": "launch",
+            "mainClass": "boj13460Original",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj14503",
+            "request": "launch",
+            "mainClass": "boj14503",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj14503test",
+            "request": "launch",
+            "mainClass": "boj14503test",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj17471",
+            "request": "launch",
+            "mainClass": "boj17471",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj18258",
+            "request": "launch",
+            "mainClass": "boj18258",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj18511",
+            "request": "launch",
+            "mainClass": "boj18511",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj1918",
+            "request": "launch",
+            "mainClass": "boj1918",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj1929",
+            "request": "launch",
+            "mainClass": "boj1929",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj1940",
+            "request": "launch",
+            "mainClass": "boj1940",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj1978",
+            "request": "launch",
+            "mainClass": "boj1978",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj20436",
+            "request": "launch",
+            "mainClass": "boj20436",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj20920",
+            "request": "launch",
+            "mainClass": "boj20920",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj21610",
+            "request": "launch",
+            "mainClass": "boj21610",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj2346",
+            "request": "launch",
+            "mainClass": "boj2346",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj2422",
+            "request": "launch",
+            "mainClass": "boj2422",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj2468",
+            "request": "launch",
+            "mainClass": "boj2468",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj2470",
+            "request": "launch",
+            "mainClass": "boj2470",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj2491",
+            "request": "launch",
+            "mainClass": "boj2491",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj2503",
+            "request": "launch",
+            "mainClass": "boj2503",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj2573",
+            "request": "launch",
+            "mainClass": "boj2573",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj25787",
+            "request": "launch",
+            "mainClass": "boj25787",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj2636",
+            "request": "launch",
+            "mainClass": "boj2636",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj2636Original",
+            "request": "launch",
+            "mainClass": "boj2636Original",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj2667",
+            "request": "launch",
+            "mainClass": "boj2667",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj2751",
+            "request": "launch",
+            "mainClass": "boj2751",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj2798",
+            "request": "launch",
+            "mainClass": "boj2798",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj2839",
+            "request": "launch",
+            "mainClass": "boj2839",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj9079",
+            "request": "launch",
+            "mainClass": "boj9079",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "boj9455",
+            "request": "launch",
+            "mainClass": "boj9455",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "launchTest",
+            "request": "launch",
+            "mainClass": "launchTest",
+            "projectName": "bojCodeJAVA_9246962d"
+        },
+        {
+            "type": "java",
+            "name": "swea1219",
+            "request": "launch",
+            "mainClass": "swea1219",
+            "projectName": "bojCodeJAVA_9246962d"
+        }
+    ]
+}
