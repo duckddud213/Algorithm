@@ -4,7 +4,7 @@ import java.util.*;
 public class boj11758 {
     static Dot[] stars;
 
-    public static void 
+    // public static void 
 
     public static void pre() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
