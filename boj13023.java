@@ -12,7 +12,6 @@ public class boj13023 {
             hasFriend = true;
             return;
         }
-        // System.out.println(num+" "+depth);
 
         for (int i = 0; i < connection[num].size(); i++) {
             if (!checked[connection[num].get(i)]) {
