@@ -75,7 +75,6 @@ public class boj18352 {
             int b = Integer.parseInt(st.nextToken());
 
             connection[a].add(b);
-            connection[b].add(a);
         }
     }
 
