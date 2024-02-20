@@ -4,7 +4,8 @@ import java.util.*;
 public class boj1644 {
     static int N, idx, cnt;
     static List<Integer> prime;
-    //해쉬는 해쉬값을 사용하여 데이터값을 구별저장하기 때문에, 탐색 과정에서 시간적인 이득을 볼 순 있지만 해쉬값 저장을 하다보니 메모리 사용량이 많아진다!!
+    //해쉬는 해쉬값을 사용하여 데이터값을 구별저장하기 때문에,
+    //탐색 과정에서 시간적인 이득을 볼 순 있지만 해쉬값 저장을 하다보니 메모리 사용량이 많아진다!!
     // static HashSet<Integer> notPrime;
     static boolean isPrime[];
 
