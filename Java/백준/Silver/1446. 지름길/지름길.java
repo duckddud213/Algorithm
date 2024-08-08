@@ -17,11 +17,11 @@ public class Main {
             return dist[src][index];
         }
 
-        if (src <= road.get(index).src && road.get(index).dest <= D) {
-            int start = road.get(index).src;
-            int end = road.get(index).dest;
-            int distance = road.get(index).dist;
+        int start = road.get(index).src;
+        int end = road.get(index).dest;
+        int distance = road.get(index).dist;
 
+        if (src <= start && end <= D) {
             int shortcut = dfs(end, index + 1) + distance - (end - start);
             result = Math.min(result, shortcut);
         }
