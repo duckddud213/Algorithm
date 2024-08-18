@@ -19,9 +19,6 @@ public class Main{
                 sum += (a * b);
             }
             System.out.println(sum);
-//            sb.append(sum).append('\n');
         }
-        
-//        System.out.print(sum);
     }
 }
