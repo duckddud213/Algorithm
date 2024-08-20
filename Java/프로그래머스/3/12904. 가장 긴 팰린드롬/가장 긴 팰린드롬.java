@@ -1,37 +1,12 @@
-import java.io.*;
-import java.util.*;
-
 class Solution
 {
-    static int answer;
-    
-    public int solution(String s){
-        answer = 0;
-        
-        int len = s.length();
-        
-        for(int i = len; i >= 1; i--){
-            for(int j = 0; j <= len - i; j ++){
-                int src = j;
-                int dest = i + j - 1;
-                
-                boolean isPal = true;
-                
-                while(src < dest){
-                    if(s.charAt(src) != s.charAt(dest)){
-                        isPal = false;
-                        break;
-                    }
-                    src++;
-                    dest--;
-                }
-                
-                if(isPal){
-                    return i;
-                }
-            }
-        }
-        
+    public int solution(String s)
+    {
+        int answer = 0;
+
+        // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+        System.out.println("Hello Java");
+
         return answer;
     }
 }
