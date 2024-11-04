@@ -1,64 +1,76 @@
 import java.io.*;
-import java.util.StringTokenizer;
+import java.util.*;
 
-public class Main{
-	static int n, result, Init = Integer.MAX_VALUE;
-	static int[] elements, tree;
-	public static void main(String[] args) throws IOException{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringBuilder sb = new StringBuilder();
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		n = Integer.parseInt(st.nextToken());
-		int m = Integer.parseInt(st.nextToken());
-		
-		elements = new int[n+1];
-		for(int i=1; i<n+1; i++) {
-			elements[i] = Integer.parseInt(br.readLine());
-		}
-		
-		int treeSize = getTreeSize();
-		tree = new int[treeSize];
-		init(1,n,1);
-        
-		for(int i=0; i<m; i++) {
-			st = new StringTokenizer(br.readLine());
-			int a = Integer.parseInt(st.nextToken());
-			int b = Integer.parseInt(st.nextToken());
-			result = Init;
-			getMin(1, n, 1, a, b);
-			sb.append(result+"\n");
-		}
-		System.out.println(sb.toString());
-	}
-	static int getTreeSize() {
-		int h = (int)Math.ceil(Math.log(n)/Math.log(2)) +1;
-		return (int)Math.pow(2,h);
-	}
-	
-	static void init(int start, int end, int node) {
-		if(start == end) {
-			tree[node] = elements[start];
-		}else{
-			int mid = (start+end)/2;
-			
-			init(start, mid, node*2);
-			init(mid+1, end, node*2+1);
-			
-			if(tree[node*2] < tree[node*2+1]) {
-				tree[node] = tree[node*2];
-			}else {
-				tree[node] = tree[node*2+1];
-			}
-		}
-	}
-	static void getMin(int start, int end, int node, int l, int r) {
-		if(end < l || r < start) return;
-		if(l<= start && end <= r) {
-			result = Math.min(result, tree[node]);
-			return;
-		}
-		int mid = (start+end)/2;
-		getMin(start, mid, node*2, l,r);
-		getMin(mid+1, end, node*2+1, l, r);
-	}
+public class Main {
+    static int N, M, h, size, result;
+    static int num[], tree[];
+    static StringBuilder sb;
+
+    public static void getMin(int src, int dest, int node, int l, int r) {
+        if (dest < l || r < src) {
+            return;
+        }
+
+        if (l <= src && dest <= r) {
+            result = Math.min(result, tree[node]);
+            return;
+        }
+
+        int m = (src + dest) / 2;
+        getMin(src, m, node * 2, l, r);
+        getMin(m + 1, dest, node * 2 + 1, l, r);
+    }
+
+    public static void init(int src, int dest, int node) {
+        if (src == dest) {
+            tree[node] = num[src];
+        }
+        else {
+            int m = (src + dest) / 2;
+
+            init(src, m, node * 2);
+            init(m + 1, dest, node * 2 + 1);
+
+            if (tree[node * 2] < tree[node * 2 + 1]) {
+                tree[node] = tree[node * 2];
+            }
+            else {
+                tree[node] = tree[node * 2 + 1];
+            }
+        }
+    }
+
+    public static void pre() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        sb = new StringBuilder();
+
+        N = Integer.parseInt(st.nextToken());
+        M = Integer.parseInt(st.nextToken());
+        h = (int) Math.ceil(Math.log(N) / Math.log(2)) + 1;
+        size = (int) Math.pow(2, h);
+
+        num = new int[N + 1];
+
+        for (int i = 1; i <= N; i++) {
+            num[i] = Integer.parseInt(br.readLine());
+        }
+
+        tree = new int[size];
+        init(1, N, 1);
+
+        for (int i = 0; i < M; i++) {
+            st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            result = Integer.MAX_VALUE;
+            getMin(1, N, 1, a, b);
+            sb.append(result).append('\n');
+        }
+    }
+
+    public static void main(String args[]) throws IOException {
+        pre();
+        System.out.print(sb);
+    }
 }
