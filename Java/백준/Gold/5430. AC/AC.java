@@ -2,86 +2,83 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-    static int x, T, N;
-    static String p, input;
-    static boolean isReverse;
+    static int T, N;
+    static List<Integer> num;
+    static String comm;
     static StringBuilder sb;
-    static Deque<String> que;
 
     public static void AC() {
-        for (int i = 0; i < p.length(); i++) {
-            if (p.charAt(i) == 'R') {
-                isReverse = !isReverse;
-            } 
-            else if (p.charAt(i) == 'D') {
-                if (que.size() == 0) {
-                    sb.append("error").append('\n');
+        boolean isReversed = false;
+        for (int i = 0; i < comm.length(); i++) {
+            Character command = comm.charAt(i);
+
+            if (command == 'R') {
+                isReversed = !isReversed;
+            }
+            else if (command == 'D') {
+                if (num.isEmpty()) {
+                    sb.append("error").append(("\n"));
                     return;
-                } 
+                }
+
+                if (!isReversed) {
+                    num.remove(0);
+                }
                 else {
-                    if (isReverse) {
-                        que.removeLast();
-                    }
-                    else {
-                        que.remove();
-                    }
+                    num.remove(num.size() - 1);
                 }
             }
         }
-        
-        if (que.size() == 0) {
+
+        if (num.isEmpty()) {
             sb.append("[]").append('\n');
             return;
         }
 
-        sb.append('[');
-        while (que.size() != 1) {
-            if (isReverse) {
-                sb.append(que.pollLast()).append(',');
-            } 
-            else {
-                sb.append(que.poll()).append(',');
-            }
-        }
-        sb.append(que.poll()).append(']').append('\n');
+        sb.append("[");
 
+        if (!isReversed) {
+            for (int i = 0; i < num.size() - 1; i++) {
+                sb.append(num.get(i)).append(",");
+            }
+            sb.append(num.get(num.size() - 1));
+        }
+        else {
+            for (int i = num.size() - 1; i > 0; i--) {
+                sb.append(num.get(i)).append(",");
+            }
+            sb.append(num.get(0));
+        }
+
+        sb.append("]").append("\n");
     }
 
-    public static void pre() throws IOException {
+    public static void inputs() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        sb = new StringBuilder();
 
         T = Integer.parseInt(br.readLine());
-        sb = new StringBuilder();
-        que = new ArrayDeque<>();
-        StringTokenizer st;
 
-        for (x = 1; x <= T; x++) {
-            p = br.readLine();
+        for (int tc = 0; tc < T; tc++) {
+            comm = br.readLine();
+
             N = Integer.parseInt(br.readLine());
-            input = br.readLine();
-            isReverse = false;
-            que.clear();
+            num = new ArrayList<>();
 
-            st = new StringTokenizer(input, "[,]");
+            String input = br.readLine();
+            String newArr = input.substring(1, input.length() - 1);
 
-            // if (result[0].equals("")) {
-            //     sb.append("error").append('\n');
-            //     continue;
-            // }
-
-            while (st.hasMoreTokens()) {
-                que.add(st.nextToken());
+            StringTokenizer st = new StringTokenizer(newArr, ",");
+            for (int i = 0; i < N; i++) {
+                num.add(Integer.parseInt(st.nextToken()));
             }
-            // for (int i = 0; i < result.length; i++) {
-            //     que.add(result[i]);
-            // }
 
             AC();
         }
     }
 
     public static void main(String args[]) throws IOException {
-        pre();
+        inputs();
         System.out.print(sb);
     }
 }
