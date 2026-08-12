@@ -1,34 +1,34 @@
 import java.io.*;
 import java.util.*;
+import java.math.*;
 
 class Solution {
-    static int N;
     static long answer;
     static PriorityQueue<Integer> pq;
-    
-    public static void work(int remain[]){
-        for(int num : remain){
-            pq.add(num);
-        }
-        
-        for(int time = N; time > 0 && pq.peek() > 0; time--){
-            int num = pq.poll();
-            pq.add(num - 1);
-        }
-        
-        while(!pq.isEmpty()){
-            int num = pq.poll();
-            answer += (num * num);
-        }
-    }
-    
     public long solution(int n, int[] works) {
         answer = 0;
-        N = n;
         
         pq = new PriorityQueue<>(Collections.reverseOrder());
         
-        work(works);
+        for(int num : works){
+            pq.add(num);
+        }
+        
+        for(int i = 0; i < n; i ++){
+            int time = pq.poll();
+            
+            if(time == 0){
+                //야근시간보다 작업량이 적은 경우
+                return 0;
+            }
+            
+            pq.add(time - 1);
+        }
+        
+        while(!pq.isEmpty()){
+            int remain = pq.poll();
+            answer += (remain * remain);
+        }
         
         return answer;
     }
